@@ -1,9 +1,11 @@
-
+let cnv;
 let slider;
 let phase = 0;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  cnv = createCanvas(windowWidth, windowHeight);
+  cnv.position('0', '0');
+  cnv.style('z-index', '-1');
   slider = createSlider(0,2,0.55,0.01);
 }
  
@@ -13,7 +15,6 @@ function setup() {
   translate(width/2, height/2);
   noStroke();
   fill(255,255,0);
-  let t = 0;
   beginShape();
   let noiseMax = slider.value();
   for (let a = 0; a < TWO_PI; a+=0.1) {
@@ -23,9 +24,12 @@ function setup() {
     let x = r * cos(a);
     let y = r * sin(a);
     vertex(x,y);
-    t += 0.0001;
   }
   endShape(CLOSE);
   //noLoop();
-  phase += 0.01; 
+  //phase += 0.01; 
  }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
