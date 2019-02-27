@@ -7,6 +7,8 @@ function setup() {
   cnv.position('0', '0');
   cnv.style('z-index', '-1');
   slider = createSlider(0,2,0.55,0.01);
+  slider.style('width', '100%');
+  slider.style('float', 'right');
 }
  
 
