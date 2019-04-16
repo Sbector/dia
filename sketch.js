@@ -10,10 +10,10 @@ function setup() {
   slider.style('width', '100%');
   slider.position('0', '20');
 }
- 
+
 
  function draw(){
-  background(255);
+  background(250);
   translate(width/2, height/2);
   noStroke();
   fill(255,255,0);
@@ -29,7 +29,7 @@ function setup() {
   }
   endShape(CLOSE);
   //noLoop();
-  //phase += 0.01; 
+  //phase += 0.01;
  }
 
 function windowResized() {
