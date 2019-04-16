@@ -13,7 +13,7 @@ function setup() {
 
 
  function draw(){
-  background(250);
+  background(255);
   translate(width/2, height/2);
   noStroke();
   fill(255,255,0);
