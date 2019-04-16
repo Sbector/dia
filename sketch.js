@@ -16,7 +16,7 @@ function setup() {
   background(255);
   translate(width/2, height/2);
   noStroke();
-  fill(255,255,0);
+  fill(180,180,0);
   beginShape();
   let noiseMax = slider.value();
   for (let a = 0; a < TWO_PI; a+=0.1) {
